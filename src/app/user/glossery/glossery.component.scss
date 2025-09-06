@@ -1,0 +1,66 @@
+
+.page_parts {
+   display: flex;
+   flex-direction: column;
+   margin: 0 10px;
+   gap: 20px;
+   opacity: 0;
+   transition: opacity 1s ease-in-out;
+   align-items: center;
+}
+
+.tag_list {
+   width:10%;
+   padding-left: 10px;
+   text-align: center;
+   text-transform: capitalize;
+}
+
+._tag {
+   font-size: 14px;
+   text-decoration:none;
+   margin-left: 5px;
+   text-align: center;
+   padding-bottom: 7px;
+   background-color: rgba(rgb(158, 158, 158), 1) !important;
+   cursor: pointer;
+}
+
+._tag:hover {
+   color: white;
+   background-color: rgba(rgb(109, 109, 109), 1) !important;
+}
+
+.ref_list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width:85%;
+}
+ 
+.appearing {
+   opacity: 1;
+}
+
+.pulsing {
+   animation-iteration-count: 1;
+   animation: pulse 1s;
+   animation-direction: alternate;
+}
+
+@keyframes pulse {
+   0% {
+       opacity: 1;
+   }
+   50% {
+       opacity: 0;
+   }
+   100% {
+       opacity: 1;
+   }
+}
+
+.noResults {
+   font-family:"Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+   text-align: center;
+}

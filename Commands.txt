@@ -1,0 +1,288 @@
+
+
+todo:
+
+& bugs:
+
+- edit form (check title availability in DB // back- up)
+- add form (check title availability in DB)
+
+& functionalities:
+
+- textarea (insert img, underline, resize, color...)
+- DB cleaner (on command input) (finds relevant tags, remove unused tags, content refs for faster loading)
+- password needed to use admin commands
+- error module
+
+& speed:
+
+- remove unnecessary routing modules? sure but only in componentes
+- add and edit (try removing ReactiveFormsModule in one of them and check if something changes)
+- see, edit, add, delete (add needs better CSS)
+
+& other (unrelevent):
+
+- explain (json, forms, modules, inputs)
+
+** Angular - Basics:
+
+1) Creation a new project: 
+
+ng new Glossery --routing --style=scss --skip-tests
+
+2) Generating modules and their components:
+
+ng generate module user --routing --module=app
+ng generate component user/user --module user --export --flat
+ng generate component user/header --module user
+ng generate module user/home --routing --module=user
+ng generate component user/home/home --module user --export --flat
+ng generate module user/glossery --routing --module=user
+ng generate component user/glossery/glossery --module user --export --flat
+ng generate component user/glossery/pins/pins --module glossery --export --flat
+ng generate component user/glossery/line/line --module glossery --export --flat
+ng generate module user/reference --routing --module=user
+ng generate component user/reference/reference --module user --export --flat
+ng generate component user/reference/show --module reference --export --flat
+
+ng generate module admin --routing --module=app
+ng generate component admin/admin --module admin --export --flat
+ng generate module admin/add --routing --module=admin
+ng generate component admin/add/add --module admin --export --flat
+ng generate module admin/edit --routing --module=admin
+ng generate component admin/edit/edit --module admin --export --flat
+ng generate module admin/gesterr --routing --module=admin
+ng generate component admin/form/form --module admin --export --flat
+
+>> Do a final check on the --module and check sole components like header or footer (remove --export --flat, edit their path).
+
+3) Pour que Angular affiche par défaut la vue (page) home associée au composant HomeComponent, ajouter dans le fichier du module principal de configuration des route app-routing.module.ts une route au tableau routes :
+
+const routes: Routes = [
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: '', component : UserComponent, 
+     children: [ // Nested Routing
+      {
+        path: 'home',
+        component: HomeComponent,
+      },
+      {
+        path: 'glossery',
+        component: GlosseryComponent,
+      },
+      {
+        path: 'reference',
+        component: ReferenceComponent,
+      }
+     ]
+    },
+    { path: '**', component: PageNotFoundComponent } // Any other path (else)
+];
+
+
+4) Dans le fichier template de AppComponent (app.component.html) et tous les modules parents, effacer tout le code et le remplacer par:
+
+<router-outlet> </router-outlet>
+
+** Exporting components:
+
+  If you happen to need a component from another moduleA in your current moduleB,
+  
+ >> Make sure to add that module to 'exports' and add the component to 'imports' to the moduleB.
+
+
+5) Execute:
+
+ng serve --open
+
+
+** How to - Create an Object (Product, Client) in Angular:
+
+There are two ways: 
+
+1) JSON: (Editable, Save-able)
+
+a) 
+
+ng generate class shared/models/reference
+
+>-->
+export interface Reference {
+  title: string;
+  tags?: string;
+  content: string; 
+  creation_date: string;
+  links?: string;
+  // constructor(args: Reference) {
+  //     this.title = args.title;
+  //     this.tags = args.tags; 
+  //     this.content = args.content;
+  //     this.creation_date = args.creation_date;
+  //     this.links = args.links;
+  // }
+}
+<--<
+
+b)
+
+ng generate service services/reference
+
+>-->
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Reference } from '../shared/models/references';
+import { Observable } from 'rxjs/Observable';
+
+@Injectable({
+  providedIn: 'root'
+})
+
+export class referenceService {
+
+  private DB_URL: string = "/assets/data/references.json";
+
+  constructor(private http: HttpClient) { }
+
+  getReferences(): Observable<Reference[]> {
+    return this.http.get<Reference[]>(this.DB_URL);
+  }
+}
+<--<
+
+c) When getting your array through the accessor function:
+
+>-->
+public this.references = [];
+this.referenceService.getReferences().subscribe(data => this.references = data);
+<--<
+
+
+** Definitions:
+
+Angular permet de mettre en place des applications web modulaires afin de mieux structurer le code
+et de faciliter la maintenance, la réutilisation et le partage. Une application Angular se base essentiellement sur la notion de composants. Ces derniers permettent de contrôler les différents éléments qui composent l’interface de l’application (affichage des données et gestion des interactions avec l’utilisateur). Une application Angular est alors une collection de composants, chaque composant contrôlant une partie de l’application. Les composants sont organisée en un arbre dont la racine est le composant AppComponent. Accédez au dossier src/app. L’implémentation du composant racine AppComponent utilise trois  fichiers :
+
+1. app.component.ts : le code de la classe du composant AppComponent, écrit en TypeScript  (sur-ensemble de JavaScript).
+
+2. app.component.html : le template HTML de AppComponent
+
+3. app.component.css : la feuille de style privée de AppComponent
+
+
+
+Un module Angular ou NgModule est un mécanisme permettant de regrouper des composants, des services, directives, pipes etc..., définir leurs dépendances, et définir leur visibilité.
+
+
+Un composant Angular contrôle une portion de l’affichage graphique de l’application appelée vue. Une vue peut être par exemple l'ensemble de la page web, une fenêtre de tchat, une barre de navigation, etc. A chaque composant sont associés une classe qui définit sa logique (fichier typescript) et un template html.
+
+
+Une dépendance est généralement l'instance d'une classe permettant de factoriser certaines fonctionnalités ou d'accéder à un état partagé permettant ainsi aux composants de communiquer entre eux. Dans le vocabulaire Angular, ces classes sont appelées "services". Les services sont le plus souvent des singletons (une seule instance est utilisée dans toute l’application). Un service peut être vu comme un conteneur de code réutilisable et/ou de données partagées.
+
+Le service peut récupérer les données relévant d'un classe à partir d’un serveur distant, ou depuis un fichier local. Le fait d’enlever l’accès aux données du code des composants permet de modifier facilement et à tout moment l’implémentation de cet accès sans toucher aux composants.
+
+
+HTTP and Observables in Angular, https://www.youtube.com/watch?v=vj0kUzKOgGQ
+
+All HttpClient methods return an RxJS Observable of something.
+
+HTTP is a request/response protocol. You make a request, it returns a single response.
+
+In general, an observable can return multiple values over time. An observable from HttpClient always emits a single value and then completes, never to emit again.
+
+This particular HttpClient.get() call returns an Observable<Hero[]>; that is, "an observable of hero arrays". In practice, it will only return a single hero array.
+
+
+WHAT IS PROVIDERS in app.module.ts????? What's is relation with services????
+
+
+
+https://stackoverflow.com/questions/39152071/cant-bind-to-formgroup-since-it-isnt-a-known-property-of-form
+
+
+** Directives:
+
+ng g d textarea-autoresize
+
+https://pretagteam.com/question/angular-directive-not-detected
+
+
+** Server-side - JSON : 
+
+Add, remove, edit data, error service
+
+https://angular.io/tutorial/toh-pt6
+
+what does 'subscribe' after this.http.(smth) DO?????
+
+
+https://www.it-swarm-fr.com/fr/angular/angular-httpclient-modifier-la-reponse-en-service/834885021/
+
+
+
+JSON - How to use Json and how to deal with errors (BYPASS ERRORS: REFUSE ACCESS, FILE NOT FOUND, INTERNAL SERVER ERROR) 200, 500, 404, 304
+
+json-server --watch src/assets/references.json
+
+https://www.tektutorialshub.com/angular/angular-http-post-example/
+https://github.com/angular/in-memory-web-api
+https://github.com/typicode/json-server
+https://stackoverflow.com/questions/52030845/json-server-getting-error-after-post-request
+https://stackoverflow.com/questions/56687845/angular-7-http-post-500-internal-server-error/56688000
+
+
+CODE DOES NOT RENDER INSIDE BLOCK
+
+https://stackoverflow.com/questions/551803/why-does-code-render-in-code-block/552101
+
+
+GETTING DATA FROM URL LINK:
+
+https://stackoverflow.com/questions/52364998/get-data-from-url-in-angular-5
+
+
+** How to navigate using the URL:
+
+constructor(private router: Router) { }
+
+this.router.navigateByUrl('/home');
+
+
+** REGEX:
+
+str.replace(/\s\w\./g, subst);
+
+WARNING: THERE's NOT '' in JAVASCRIPT REGEX
+
+PHRASE: '/^CTR.*$/m'
+
+/ = delimiter
+^ = start of string
+CTR = literal CTR
+$ = end of string
+.* = zero or more of any character except newline
+m = enables multi-line mode, this sets regex to treat every line as a string, so ^ and $ will match start and end of line
+\Z = end of string
+
+\r = carriage return / old Mac OS newline
+\n = line-feed / Unix/Mac OS X newline
+\r\n = windows newline
+
+PHRASE: '(?i)^[ \r\n]*CTR'
+
+(?i) -- case insensitive -- Remove if case sensitive.
+[\r\n]  -- ignore space and new lines
+* -- 0 or more times the same
+CTR - your starts with string.
+
+'/^.\.'
+
+\. -- a normal dot
+
+PHRASE: '^\w+(\s\w+)*$'
+
+
+\w -- Match any word character [a-zA-Z0-9_]
++ -- Between one and unlimited times, as many times as possible, giving back as needed [greedy]
+
+1st - Capturing group '(\s\w+)*'
+  \s -- Match any white space character [\r\n\t\f ]

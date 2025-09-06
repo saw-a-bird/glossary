@@ -1,0 +1,94 @@
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+._line {
+    transition: box-shadow 200ms;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    border: 1.5px solid;
+    border-radius: 5px;
+    border-color: #c8c8c8;
+    padding-left: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+._line:hover {
+    box-shadow: rgba(17, 17, 26, 0.175) 0px 0px 16px;
+
+}
+
+._header {
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+
+._title {
+    margin-right: 10px;
+    margin-left: 5px;
+    margin-top: 7px;
+    float:left;
+}
+
+._title h3 {
+    margin: 0;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+._tags {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+._content {
+    margin: 20px 10px 20px 10px;   
+    
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    @supports (-webkit-line-clamp: 2) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: initial;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+}
+
+._footer {
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin-bottom: 3px;
+    margin-right: 5px;
+}
+
+._ref {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+._footer span, ._ref {
+    display: inline-block;
+    font-size: 10px;
+}
+
+mat-panel-title {
+    justify-content: center !important;
+    font-weight: 200;
+}
+
+._footer span {
+    margin-right: 5px;
+}

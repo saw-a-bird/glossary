@@ -1,0 +1,18 @@
+
+
+<div id = "search_div" class = "search_div field" #searchDiv>
+    <input
+        type="text"
+        class="form-control search_bar"
+        id = "floatingInput"
+        [formControl]="searchControl"
+        placeholder="eg. Functions #JS" 
+        (keyup.enter) = "onSubmit()"
+        #searchBar
+    />
+    <label for="floatingInput">Search</label>
+
+    <div class = "app_title" #appTitle> Glossary </div>
+</div>
+
+<app-glossery [search] = "searchString"> </app-glossery>

@@ -1,0 +1,46 @@
+
+
+<h1 class = "admin_t">{{formName}}{{ isLoaded? "" : ' (Loading...)' }}</h1>
+
+<form class="border border-light form-padding" name = "referenceForm" [formGroup]="referenceForm" (ngSubmit)="onSubmit()">
+
+    <h3> Title : </h3> <span *ngIf="referenceForm.get('title')?.errors?.['required']"> (required)</span> 
+    <input type="text" name = "title" formControlName="title" id="_title" class="form-control mb-4" placeholder="eg. What is Angular?" required>
+
+
+    <h3> Tags : </h3>
+    <input type="text" name="tags" id="_tags" formControlName="tags" class="form-control mb-4" placeholder="eg. #angular #javascript">
+
+    <h3> Links : </h3>
+    <input type="text" class="form-control  mb-4" formControlName="links" name="links"  id="_links" placeholder="www.stackoverflow.com, www...">
+
+    <h3> Content : </h3>  <span *ngIf="referenceForm.get('content')?.errors?.['required']"> (required)</span> 
+    <li class = "icon_list">  
+        <div *ngFor="let fa of faIcons" class = "_icon" (click) = "iconClick(fa);"> 
+            <fa-icon [icon] = "fa" class="fa-sm" > </fa-icon> 
+        </div> 
+    </li>
+    <div class="form-group shadow-textarea">
+        <textarea class="form-control" name = "content" formControlName="content" id="_content" placeholder="Write something ..." appTextareaAutoresize required></textarea>
+    </div>
+
+    <br/>
+
+    <!-- Send button -->
+    <div class = "text-center">
+        <div *ngIf="notification != null && notification.code != 0" class = "msg_">
+            <p [ngClass]="{'msg_color_red': notification.type == 'error'}"> {{notification.text}}</p>
+        </div>
+
+        <button type="submit" class = "btn btnEffects" [disabled]="referenceForm.invalid">{{formName}}</button>
+    </div>
+
+    <markdown [data]="markdownText"></markdown>
+    <!-- <app-show [contentRef] = 'updateContent()'> </app-show> -->
+</form>
+
+
+
+
+
+

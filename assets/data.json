@@ -1,0 +1,351 @@
+{
+  "references": [
+    {
+      "title": "Angular",
+      "tags": "js yolo",
+      "content": "Angular permet de mettre en place des applications web modulaires afin de mieux structurer le code et de faciliter la maintenance, la réutilisation et le partage. Une application Angular se base essentiellement sur la notion de composants. Ces derniers permettent de contrôler les différents éléments qui composent l’interface de l’application (affichage des données et gestion des interactions avec l’utilisateur). Une application Angular est alors une collection de composants, chaque composant contrôlant une partie de l’application. Les composants sont organisée en un arbre dont la racine est le composant AppComponent. Accédez au dossier src/app. L’implémentation du composant racine AppComponent utilise trois  fichiers :\n\n1. app.component.ts : le code de la classe du composant AppComponent, écrit en TypeScript  (sur-ensemble de JavaScript). \n\n2. app.component.html : le template HTML de AppComponent \n\n3. app.component.css : la feuille de style privée de AppComponent",
+      "links": "",
+      "creation_date": "Wed Nov 17 2021 13:28:55 GMT+0100 (GMT+01:00)",
+      "modification_date": "Wed Nov 17 2021 13:32:46 GMT+0100 (GMT+01:00)",
+      "id": 0
+    },
+    {
+      "title": "supq",
+      "tags": "test aaaa lmao angular",
+      "content": "helloA<><<<>><h1>test</h1> fuck!",
+      "creation_date": "Wed Nov 17 2021 13:28:55 GMT+0100 (GMT+01:00)",
+      "modification_date": "Wed Nov 17 2021 13:32:46 GMT+0100 (GMT+01:00)",
+      "links": "",
+      "id": 1
+    },
+    {
+      "title": "azdazd",
+      "tags": "azdad",
+      "content": "azdazd <h1> test <h1>",
+      "creation_date": "Wed Nov 17 2021 13:28:55 GMT+0100 (GMT+01:00)",
+      "modification_date": "Wed Nov 17 2021 13:32:46 GMT+0100 (GMT+01:00)",
+      "id": 16
+    },
+    {
+      "title": "qsd",
+      "tags": "qsd",
+      "content": "qsd",
+      "creation_date": "Wed Nov 17 2021 13:28:55 GMT+0100 (GMT+01:00)",
+      "modification_date": "Wed Nov 17 2021 13:32:46 GMT+0100 (GMT+01:00)",
+      "id": 17
+    },
+    {
+      "title": "test date",
+      "tags": "date",
+      "content": "dater",
+      "links": "",
+      "creation_date": "Wed Nov 17 2021 12:03:04 GMT+0100 (GMT+01:00)",
+      "id": 20
+    },
+    {
+      "title": "sqd",
+      "tags": "d",
+      "content": "dD",
+      "links": "a",
+      "creation_date": "Wed Nov 17 2021 13:28:55 GMT+0100 (GMT+01:00)",
+      "modification_date": "Wed Nov 17 2021 13:32:46 GMT+0100 (GMT+01:00)",
+      "id": 21
+    },
+    {
+      "title": "qsdqsd",
+      "tags": "qsdqsd",
+      "content": "zaeqsd",
+      "links": "sqdqsd",
+      "creation_date": "Sat Dec 04 2021 10:55:21 GMT+0100 (GMT+01:00)",
+      "id": 22
+    },
+    {
+      "title": "Frontend and Backend",
+      "tags": "",
+      "content": "Most front-end applications need to communicate with a server over the HTTP protocol, to download or upload data and access other back-end services.\n<br/>\nThe client side is also known as the frontend, although these two terms do not mean precisely the same thing. Client-side refers solely to the location where processes run, while frontend refers to the kinds of processes that run client-side.\n<br/>\n1. You open a web browser(viz. Chrome or Firefox). You enter the URL in the address bar (viz. http://facebook.com) and hit enter. This is a **HTTP request** that you are making to the Facebook server. You are essentially asking a remote computer managed by Facebook to return the data stored on its hard drive for displaying it on your web browser.\n<br/>\n2. Facebook's servers receives the request. It performs various checks with the request data that it receives from you. (viz. who is the user making this request? and so on). These types of checks are written by Facebook programmers using a **server side programming language** (viz. PHP). Once the server side program implements all of its logic related to your request, it returns the appropriate data to your web browser. This data is in HTML format, a language that your browser understands. This part of web is categorised as **back end**.\n<br/>\nThe backend usually consists of three parts: a server, an application, and a database. If you book a flight or buy concert tickets, you usually open a website and interact with the frontend. Once you’ve entered that information, the application stores it in a database that was created on a server. For sake of ease, just think about a database as a giant Excel spreadsheet on your computer, but your computer (server) is stored somewhere in Arizona.\n<br/>\nWe call a person that builds all of this technology to work together a backend developer. Backend technologies usually consist of languages like PHP, Ruby, Python, etc. To make them even easier to use they’re usually enhanced by frameworks like Ruby on Rails, Cake PHP, and Code Igniter that all make development faster and easier to collaborate on.\n\n<br/>\n3. The HTML data is nothing but the Facebook profile page that you see on your web browser. To make it look pretty, programmers use **client side programming languages** like CSS and JavaScript. CSS is specifically used for styling HTML content and JS is used to control and manipulate events (viz. mouse click, keypress etc.). They are called client side languages because they get executed on your browser (on your PC) and not on the server. This part of the web is categorised as **front end**.",
+      "links": "",
+      "creation_date": "Sun Dec 05 2021 08:14:22 GMT+0100 (GMT+01:00)",
+      "id": 23
+    },
+    {
+      "title": "test",
+      "tags": "a",
+      "content": "fuck",
+      "links": "a",
+      "creation_date": "Sun Dec 05 2021 17:24:13 GMT+0100 (GMT+01:00)",
+      "id": 24
+    },
+    {
+      "title": "aaa",
+      "tags": "aaa",
+      "content": "aaaqsd",
+      "links": "aaa",
+      "creation_date": "Tue Oct 25 2022 07:36:47 GMT+0100 (GMT+01:00)",
+      "id": 25
+    },
+    {
+      "title": "aaa",
+      "tags": "aaa",
+      "content": "aaaqsd",
+      "links": "aaa",
+      "creation_date": "Tue Oct 25 2022 07:36:47 GMT+0100 (GMT+01:00)",
+      "id": 26
+    },
+    {
+      "title": "aaa",
+      "tags": "aaa",
+      "content": "aaaqsd",
+      "links": "aaa",
+      "creation_date": "Tue Oct 25 2022 07:36:47 GMT+0100 (GMT+01:00)",
+      "id": 27
+    },
+    {
+      "title": "testest",
+      "tags": "js",
+      "content": "aaa",
+      "links": "fk",
+      "creation_date": "Tue Oct 25 2022 07:43:28 GMT+0100 (GMT+01:00)",
+      "id": 28
+    },
+    {
+      "title": "testest",
+      "tags": "js",
+      "content": "aaa",
+      "links": "fk",
+      "creation_date": "Tue Oct 25 2022 07:43:28 GMT+0100 (GMT+01:00)",
+      "id": 29
+    },
+    {
+      "title": "testest",
+      "tags": "js",
+      "content": "aaa",
+      "links": "fk",
+      "creation_date": "Tue Oct 25 2022 07:43:28 GMT+0100 (GMT+01:00)",
+      "id": 30
+    },
+    {
+      "title": "testest",
+      "tags": "testest",
+      "content": "testest",
+      "links": "testest",
+      "creation_date": "Tue Oct 25 2022 07:43:55 GMT+0100 (GMT+01:00)",
+      "id": 31
+    },
+    {
+      "title": "testest",
+      "tags": "testest",
+      "content": "testest",
+      "links": "testest",
+      "creation_date": "Tue Oct 25 2022 07:43:55 GMT+0100 (GMT+01:00)",
+      "id": 32
+    },
+    {
+      "title": "testest",
+      "tags": "testest",
+      "content": "testest",
+      "links": "testest",
+      "creation_date": "Tue Oct 25 2022 07:43:55 GMT+0100 (GMT+01:00)",
+      "id": 33
+    },
+    {
+      "title": "testest",
+      "tags": "testest",
+      "content": "testest",
+      "links": "testest",
+      "creation_date": "Tue Oct 25 2022 07:43:55 GMT+0100 (GMT+01:00)",
+      "id": 34
+    },
+    {
+      "title": "aaa",
+      "tags": "aa",
+      "content": "aa",
+      "links": "aaa",
+      "creation_date": "Tue Oct 25 2022 07:45:43 GMT+0100 (GMT+01:00)",
+      "id": 35
+    },
+    {
+      "title": "aaaa",
+      "tags": "aaaa",
+      "content": "aaaa",
+      "links": "aaa",
+      "creation_date": "Tue Oct 25 2022 07:45:54 GMT+0100 (GMT+01:00)",
+      "id": 36
+    },
+    {
+      "title": "aaa",
+      "tags": "aaaa",
+      "content": "aaaa",
+      "links": "aaa",
+      "creation_date": "Tue Oct 25 2022 07:47:58 GMT+0100 (GMT+01:00)",
+      "id": 37
+    },
+    {
+      "title": "aaa",
+      "tags": "aaaa",
+      "content": "aaaa",
+      "links": "aaa",
+      "creation_date": "Tue Oct 25 2022 07:47:58 GMT+0100 (GMT+01:00)",
+      "id": 38
+    },
+    {
+      "title": "aaa",
+      "tags": "aaaa",
+      "content": "aaaa",
+      "links": "aaa",
+      "creation_date": "Tue Oct 25 2022 07:47:58 GMT+0100 (GMT+01:00)",
+      "id": 39
+    },
+    {
+      "title": "aaa",
+      "tags": "aaaa",
+      "content": "aaaa",
+      "links": "aaa",
+      "creation_date": "Tue Oct 25 2022 07:47:58 GMT+0100 (GMT+01:00)",
+      "id": 40
+    },
+    {
+      "title": "aaa",
+      "tags": "aaaa",
+      "content": "aaaa",
+      "links": "aaa",
+      "creation_date": "Tue Oct 25 2022 07:47:58 GMT+0100 (GMT+01:00)",
+      "id": 41
+    },
+    {
+      "title": "aaa",
+      "tags": "aaaa",
+      "content": "aaaa",
+      "links": "aaa",
+      "creation_date": "Tue Oct 25 2022 07:47:58 GMT+0100 (GMT+01:00)",
+      "id": 42
+    },
+    {
+      "title": "aaa",
+      "tags": "aaaa",
+      "content": "aaaa",
+      "links": "aaa",
+      "creation_date": "Tue Oct 25 2022 07:47:58 GMT+0100 (GMT+01:00)",
+      "id": 43
+    },
+    {
+      "title": "aaa",
+      "tags": "aaaa",
+      "content": "aaaa",
+      "links": "aaa",
+      "creation_date": "Tue Oct 25 2022 07:47:58 GMT+0100 (GMT+01:00)",
+      "id": 44
+    },
+    {
+      "title": "azeaz",
+      "tags": "ezaeaz",
+      "content": "azeaze",
+      "links": "azeazez",
+      "creation_date": "Tue Oct 25 2022 07:49:17 GMT+0100 (GMT+01:00)",
+      "id": 45
+    },
+    {
+      "title": "azeaz",
+      "tags": "ezaeaz",
+      "content": "azeaze",
+      "links": "azeazez",
+      "creation_date": "Tue Oct 25 2022 07:49:17 GMT+0100 (GMT+01:00)",
+      "id": 46
+    },
+    {
+      "title": "azeaz",
+      "tags": "ezaeaz",
+      "content": "azeaze",
+      "links": "azeazez",
+      "creation_date": "Tue Oct 25 2022 07:49:17 GMT+0100 (GMT+01:00)",
+      "id": 47
+    },
+    {
+      "title": "azeaz",
+      "tags": "ezaeaz",
+      "content": "azeaze",
+      "links": "azeazez",
+      "creation_date": "Tue Oct 25 2022 07:49:17 GMT+0100 (GMT+01:00)",
+      "id": 48
+    },
+    {
+      "title": "aaaa",
+      "tags": "aa",
+      "content": "aaa",
+      "links": "aaa",
+      "creation_date": "Tue Oct 25 2022 07:50:03 GMT+0100 (GMT+01:00)",
+      "id": 49
+    },
+    {
+      "title": "adads",
+      "tags": "asd",
+      "content": "aze",
+      "links": "asd",
+      "creation_date": "Tue Oct 25 2022 07:50:22 GMT+0100 (GMT+01:00)",
+      "id": 50
+    },
+    {
+      "title": "",
+      "tags": "",
+      "content": "",
+      "links": "",
+      "creation_date": "Tue Oct 25 2022 07:53:42 GMT+0100 (GMT+01:00)",
+      "id": 51
+    },
+    {
+      "title": "",
+      "tags": "",
+      "content": "",
+      "links": "",
+      "creation_date": "Tue Oct 25 2022 07:53:54 GMT+0100 (GMT+01:00)",
+      "id": 52
+    },
+    {
+      "title": "aaa",
+      "tags": "aaa",
+      "content": "",
+      "links": "aa",
+      "creation_date": "Tue Oct 25 2022 08:00:07 GMT+0100 (GMT+01:00)",
+      "id": 53
+    },
+    {
+      "title": "",
+      "tags": "",
+      "content": "",
+      "links": "a",
+      "creation_date": "Tue Oct 25 2022 08:01:00 GMT+0100 (GMT+01:00)",
+      "id": 54
+    },
+    {
+      "title": "",
+      "tags": "",
+      "content": "",
+      "links": "",
+      "creation_date": "Tue Oct 25 2022 08:01:37 GMT+0100 (GMT+01:00)",
+      "id": 55
+    },
+    {
+      "title": "test",
+      "content": "aaa",
+      "creation_date": "Tue Oct 25 2022 08:19:08 GMT+0100 (GMT+01:00)",
+      "id": 56
+    },
+    {
+      "title": "aaa",
+      "content": "aa",
+      "creation_date": "Tue Oct 25 2022 17:10:25 GMT+0100 (GMT+01:00)",
+      "id": 57
+    },
+    {
+      "title": "aaa",
+      "content": "aaa",
+      "creation_date": "Tue Oct 25 2022 17:11:01 GMT+0100 (GMT+01:00)",
+      "id": 58
+    },
+    {
+      "title": "azeaz",
+      "content": "azeaz",
+      "creation_date": "Tue Oct 25 2022 17:13:46 GMT+0100 (GMT+01:00)",
+      "id": 59
+    }
+  ]
+}

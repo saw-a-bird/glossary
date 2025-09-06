@@ -1,0 +1,29 @@
+<div class = "_line">
+    <div class = "_header">
+        <div class = "_title">
+            <h3> <a routerLink="../reference/{{line.id}}">{{line.title}}</a> </h3> 
+        </div>
+        <span class = "_ref"> ID : {{line.id}} </span>
+    </div>
+    <div class = "_tags" #tags> </div>
+
+    <span class = "_content"> {{line.content}} </span>
+
+    <div class = "_footer">
+        <span class = "_cdate" *ngIf="line.creation_date"> Created: {{getDate(line.creation_date)}} </span>
+        <span class = "_mdate" *ngIf="line.modification_date" > Last Modified: {{getDate(line.modification_date)}} </span>
+    </div>
+</div>
+
+<!-- 
+<div class = "dets" *ngIf="prod.description">
+    <mat-expansion-panel>
+        <mat-expansion-panel-header class="center-aligned-header">
+            <mat-panel-title>
+                Details
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>{{prod.description}}</p>
+    </mat-expansion-panel>
+</div>
+-->

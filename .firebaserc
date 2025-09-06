@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "glossery-8113e"
+  },
+  "targets": {
+    "glossery-8113e": {
+      "hosting": {
+        "Glossery": [
+          "glossery-8113e"
+        ]
+      }
+    }
+  }
+}

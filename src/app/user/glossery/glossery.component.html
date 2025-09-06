@@ -1,0 +1,16 @@
+
+<div class = "page_parts" [ngClass]="visiblityAnimation" (animationend)="visiblityAnimation.pulsing=false; loadContent();">
+
+    <h4 *ngIf="references && references.length == 0; else elseBlock;" class = "noResults">  no results are found  </h4>
+    <ng-template #elseBlock>
+        <div *ngIf="tags.length > 0">
+           All Tags: <a *ngFor="let n of tags" class = "badge _tag" (click)="byTag($event)">{{n.id}} {{n.count}}</a>
+        </div>
+        
+        <div class = "ref_list">
+            <ng-container *ngFor="let ref of references">
+                <app-line [line] = "ref" [tagsHighlight] = "searchTags"> </app-line>
+            </ng-container>
+        </div>
+    </ng-template>
+</div>
